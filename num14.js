@@ -16,3 +16,27 @@
 
 // signs가 [false,false,true] 이므로, 실제 수들의 값은 각각 -1, -2, 3입니다.
 // 따라서 세 수의 합인 0을 return 해야 합니다.
+
+
+console.log(solution([1,2,3], [false,true,true]));
+console.log(0 + true)
+
+function solution(absolutes, signs) {
+    var answer = 0;
+    for(var i = 0; i< signs.length; i++){
+        if(signs[i]){
+            answer += absolutes[i]
+        }else{
+            answer += -1 * absolutes[i]
+        }
+    }
+    return answer;
+}
+
+//for 안에 if문을 넣어서 한건데 음... 
+// function solution(absolutes, signs) {
+
+//     return absolutes.reduce((acc, val, i) => acc + (val * (signs[i] ? 1 : -1)), 0);
+// }
+
+//이런것도 있는데 봐도 뭔지 모르겠다.
