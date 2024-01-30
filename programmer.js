@@ -481,5 +481,20 @@
 
 //이런것도 있는데 봐도 뭔지 모르겠다.
 
-//15번
 
+//15번
+console.log(solution(6))
+function solution(num) {
+    var answer = 0;
+    if(num === 1){
+    }else{
+        do{
+            (num%2 === 0) ? num = num / 2 : num = (num * 3) + 1
+            answer++
+        }while(num > 1 && answer < 500)
+    }
+    if(answer === 500) answer = -1
+    return answer;
+}
+
+//좀 깔끔하게 된거같다
