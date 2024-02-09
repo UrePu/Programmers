@@ -591,14 +591,14 @@
 // 1, 2, 3이 numbers에 없으므로, 1 + 2 + 3 = 6을 return 해야 합니다.
 // // }
 
-console.log(solution([1,2,3,4,6,7,8,0]))
-function solution(numbers) {
-    var answer = 0;
-    numbers.forEach(element => {
-        answer += element
-    });
-    return 45-answer;
-}
+// console.log(solution([1,2,3,4,6,7,8,0]))
+// function solution(numbers) {
+//     var answer = 0;
+//     numbers.forEach(element => {
+//         answer += element
+//     });
+//     return 45-answer;
+// }
 
 //reduce 공부하기.
 
