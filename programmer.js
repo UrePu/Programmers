@@ -615,4 +615,17 @@
 // "01033334444"	"*******4444"
 // "027778888"	"*****8888"
 
-function app
+// function solution(phone_number) {
+//     var answer = '';
+//     var ary = phone_number.slice("")
+//     for(var i =0; i < ary.length; i++){
+//         if(i < ary.length - 4){
+//             answer += "*"
+//         }else{
+//             answer += ary[i]
+//         }
+//     }
+//     return answer;
+// }
+
+//간단하게 삼항연산자로 표시가능... 
