@@ -693,3 +693,30 @@
 // }
 
 //reduce 쓰면 더 좋아보임.
+
+//22번
+
+// 문제 설명
+// 단어 s의 가운데 글자를 반환하는 함수, solution을 만들어 보세요. 단어의 길이가 짝수라면 가운데 두글자를 반환하면 됩니다.
+
+// 재한사항
+// s는 길이가 1 이상, 100이하인 스트링입니다.
+// 입출력 예
+// s	return
+// "abcde"	"c"
+// "qwer"	"we"
+
+// function solution(s) {
+//     var answer = '';
+//     var ary = s.split("")
+//     if(ary.length % 2 === 0){
+//         var a = ary.length/2
+//         answer = ary[a-1] + ary[a]
+//     }else{
+//         var b = Math.floor(ary.length/2)
+//         answer = ary[b]
+//     }
+//     return answer;
+// }
+
+//짧게도 가능한데 배우지 않음.
