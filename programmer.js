@@ -732,3 +732,19 @@
 // n	return
 // 3	"수박수"
 // 4	"수박수박"
+
+
+function solution(n) {
+    var answer = '';
+    if((n % 2) == 0) {
+        for(var i = 0 ; i < n / 2 ; i ++) {
+            answer += '수박'
+        }
+    }else {
+        answer += '수'
+        for(var i = 1 ; i < n / 2 ; i ++) {
+            answer += '박수'
+        }
+    }
+    return answer;
+}
