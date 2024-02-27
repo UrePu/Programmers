@@ -783,3 +783,31 @@
 // 26	1, 2, 13, 26	4
 // 27	1, 3, 9, 27	4
 // 따라서, 24 - 25 + 26 + 27 = 52를 return 해야 합니다.
+
+
+// // console.log(measure(11));
+// function measure(i){
+//     var ary = []
+//     for(var j = 1; j < i; j++){
+//         if(i % j == 0){
+//             ary.push(j)
+//         }
+//     }
+//     if(ary.length % 2){
+//         return +1
+//     }else return -1
+// } 
+// // console.log(solution(13,17));
+// function solution(left, right) {
+//     var answer = 0;
+//     var ary = []
+//     var i = right - left + 1
+//     for(var j = 0; j < i ; j ++){
+//         ary.push(left + j);
+//     }
+//     ary.forEach(x => answer += measure(x) * x)
+    
+//     return answer;
+// }
+
+//제곱수가 정수면 .. 약수가 짝수다..
