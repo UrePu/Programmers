@@ -11,7 +11,7 @@
 // 3	"Odd"
 // 4	"Even"
 
-
+//
 // function solution(num) {
 //     var answer = '';
 //     if ((num % 2) == 0){
