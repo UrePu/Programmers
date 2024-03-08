@@ -824,3 +824,23 @@
 // 입출력 예
 // s	return
 // "Zbcdefg"	"gfedcbZ"
+
+// console.log(solution("Zbcdefg"));
+
+// function solution(s) {
+//     var ary = s.split("")
+//     ary.sort().reverse();
+//     var answer = '';
+//     var answer__back = '';
+//     for(var i = 0; i < ary.length; i++){
+//         if (ary[i].toLowerCase() === ary[i]){
+//             answer += ary[i];
+//         }else{
+//             answer__back += ary[i];
+//         }
+//     }
+//     return answer + answer__back;
+// }
+
+//어차피 .sort()가 대문자를 앞에 정렬하는거같다.
+//s.split("").sort.reverse.join("") 으로 가능.
