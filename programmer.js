@@ -1033,15 +1033,27 @@ function measMax(a, b) {
     return max;
 }
 
-function measMin(a, b) {
+function measMin(a, b,c,d) {
     
+    var max = 0;
+    for(var i =0; i < a.length; i++){
+        for(var j=0; j < b.length; j++){
+            if(a[i] == b[j]){
+                if(max < b[j]){
+                    max = b[j];
+                }
+            }
+        }
+    }
+    console.log(max)
+    return c*d/max;
 }
 
 function solution(n, m) {
     var answer = [];
     var measn = measure(n);
     var measm = measure(m);
-    answer = [measMax(measn, measm) , measMin(measn, measm)];
+    answer = [measMax(measn, measm) , measMin(measn, measm,n,m)];
     return answer;
 }
 
