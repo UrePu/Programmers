@@ -1007,54 +1007,54 @@
 // 입출력 예 #2
 // 자연수 2와 5의 최대공약수는 1, 최소공배수는 10이므로 [1, 10]을 리턴해야 합니다.
 
-console.log(solution(2,10));
+// console.log(solution(2,10));
 
-function measure(a) {
-    var ary = [];
-        for(var i = 1 ; i <= a; i++){
-            if(a % i == 0){
-                ary.push(i)
-            }
-        }
-    return ary
-}
+// function measure(a) {
+//     var ary = [];
+//         for(var i = 1 ; i <= a; i++){
+//             if(a % i == 0){
+//                 ary.push(i)
+//             }
+//         }
+//     return ary
+// }
 
-function measMax(a, b) {
-    var max = 0;
-    for(var i =0; i < a.length; i++){
-        for(var j=0; j < b.length; j++){
-            if(a[i] == b[j]){
-                if(max < b[j]){
-                    max = b[j];
-                }
-            }
-        }
-    }
-    return max;
-}
+// function measMax(a, b) {
+//     var max = 0;
+//     for(var i =0; i < a.length; i++){
+//         for(var j=0; j < b.length; j++){
+//             if(a[i] == b[j]){
+//                 if(max < b[j]){
+//                     max = b[j];
+//                 }
+//             }
+//         }
+//     }
+//     return max;
+// }
 
-function measMin(a, b,c,d) {
+// function measMin(a, b,c,d) {
     
-    var max = 0;
-    for(var i =0; i < a.length; i++){
-        for(var j=0; j < b.length; j++){
-            if(a[i] == b[j]){
-                if(max < b[j]){
-                    max = b[j];
-                }
-            }
-        }
-    }
-    console.log(max)
-    return c*d/max;
-}
+//     var max = 0;
+//     for(var i =0; i < a.length; i++){
+//         for(var j=0; j < b.length; j++){
+//             if(a[i] == b[j]){
+//                 if(max < b[j]){
+//                     max = b[j];
+//                 }
+//             }
+//         }
+//     }
+//     console.log(max)
+//     return c*d/max;
+// }
 
-function solution(n, m) {
-    var answer = [];
-    var measn = measure(n);
-    var measm = measure(m);
-    answer = [measMax(measn, measm) , measMin(measn, measm,n,m)];
-    return answer;
-}
+// function solution(n, m) {
+//     var answer = [];
+//     var measn = measure(n);
+//     var measm = measure(m);
+//     answer = [measMax(measn, measm) , measMin(measn, measm,n,m)];
+//     return answer;
+// }
 
 
