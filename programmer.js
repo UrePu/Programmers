@@ -1337,32 +1337,20 @@
 // -1,000 ≤ number의 각 원소 ≤ 1,000
 // 서로 다른 학생의 정수 번호가 같을 수 있습니다.
 
-solution([-2, 3, 0, 2, -5])
-function solution(number) {
-    var answer = 0;
+// solution([-2, 3, 0, 2, -5])
+// function solution(number) {
+//     var answer = 0;
     
-    for(let i = 0 ; i < number.length ; i++){
-        for(let j = 0; j < number.length; j++){
-            if(i == j){
-                // console.log(number[i]+ " "+ number[j]+ " "+ i+ " "+ " " + j + " SUM + NUMBER");
-            }else{
-                var sum = number[i] + number[j]
-                // console.log(sum + "SUM 값");
-                
-                for(let x = 0; x < number.length; x ++){
-                    if(x == i || x == j){
-                        console.log(i + " " + j + " " + x + " ijx값");
-                        
-                        // console.log(number[i] + " " + number[j] + " " + number[x] + " 예외처리");
-                    } else if(sum + number[x] == 0){
-                        console.log(number[i] + " " + number[j] + " " + number[x] + " 답인 NUMI NUMJ NUMX");
-                        answer++
-                    }
-                }
-            }
-        }
-    }
-    console.log(answer); 
+//     for(let i = 0 ; i < number.length-2 ; i++){
+//         for(let j = i + 1; j < number.length -1; j++){
+//                 for(let x = j + 1; x < number.length; x ++){
+//                     if(number[i] + number[j] + number[x] == 0){
+//                         answer++
+//                     }
+//                 }
+//             }
+//         }
+//     // console.log(answer);
     
-    return answer;
-}
+//     return answer;
+// }
