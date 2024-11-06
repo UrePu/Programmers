@@ -1410,3 +1410,60 @@
 // s는 알파벳 소문자, 대문자, 공백으로만 이루어져 있습니다.
 // s의 길이는 8000이하입니다.
 // n은 1 이상, 25이하인 자연수입니다.
+
+// solution("a B z ",25)
+// String.fromCharCode(65);// A
+// // String.fromCharCode(90);// Z
+// const a = "a";
+// console.log(a.charCodeAt(0)); // 97
+// const b = 'z'
+// // console.log(b.charCodeAt(0)); // 122
+// const c = " ";
+// console.log(c.charCodeAt(0)); // 32
+
+
+// function solution(s, n) {
+//     var arrS = s.split('')
+//     var i = 0;
+//     for(let a of arrS){
+//         if(a.charCodeAt(0) == 32){
+//             // console.log("a");
+//         }else{
+//             var word = a.charCodeAt(0) + n;
+//                 if(word >= 90 && word < 97){
+//                     word = word- 26
+//                     arrS[i] = String.fromCharCode(word);
+//                 }else if(word > 122){
+//                     word = word- 26
+//                     arrS[i] = String.fromCharCode(word);
+//                 }else {arrS[i] = String.fromCharCode(word);
+//             }  
+//         }
+//        i++
+//     }
+//     var answer = arrS.join("");
+//     console.log(answer);
+    
+//     return answer;
+// }
+
+
+// function solution(s, n) {
+//     var arrS = s.split('');
+//     for (let i = 0; i < arrS.length; i++) {
+//         let charCode = arrS[i].charCodeAt(0);
+
+//         if (charCode >= 65 && charCode <= 90) {
+//             charCode = ((charCode - 65 + n) % 26) + 65;
+//             arrS[i] = String.fromCharCode(charCode);
+//         }
+//         else if (charCode >= 97 && charCode <= 122) {
+//             charCode = ((charCode - 97 + n) % 26) + 97;
+//             arrS[i] = String.fromCharCode(charCode);
+//         }
+//     }
+
+//     return arrS.join('');
+// }
+
+// 좀더 깔끔한 범위 구분이 필요할것으로 보임.
