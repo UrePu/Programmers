@@ -1478,4 +1478,39 @@
 // numbers의 길이는 2 이상 100 이하입니다.
 // numbers의 모든 수는 0 이상 100 이하입니다.
 
+solution([2,1,3,4,1])
+// function solution(numbers) {
+//     numbers = numbers.sort((a, b) => a - b)
+//     var answer = [];
+//     for(let i = 0; i < numbers.length - 1 ; i++){
+//         for(let j = 0; j < numbers.length; j++){
+//             if(i !== j)answer.push(numbers[i] + numbers[j])
+//         }
+//     }
+//     for(let i = 0; i < answer.length ; i++){
+//         for(let j = 0; j < answer.length; j++){
+//             if(answer[i] == answer[j] && i !== j){
+                
+//                 answer.splice(j,1)
+//             }
+//         }
+//     }
+//     answer = answer.sort((a, b) => a - b)
+//     return answer;
+    
+// }
 
+// function solution(numbers) {
+//     const sums = new Set();
+    
+//     for (let i = 0; i < numbers.length - 1; i++) {
+//         for (let j = i + 1; j < numbers.length; j++) {
+//             sums.add(numbers[i] + numbers[j]);
+//         }
+//     }
+    
+//     // Set을 Array로 변환하고 정렬
+//     return Array.from(sums).sort((a, b) => a - b);
+// }
+
+//Set 함수는 중복을 자동 제거 해준다.
