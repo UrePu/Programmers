@@ -1529,3 +1529,20 @@
 // 따라서 최종 결과물은 [-1, -1, -1, 2, 2, 2]가 됩니다.
 
 // 문자열 s이 주어질 때, 위와 같이 정의된 연산을 수행하는 함수 solution을 완성해주세요
+// solution("foobar")
+// function solution(s) {
+//     var arrS = s.split("")
+//     var answer = []
+//     for(let i = 0; i < arrS.length; i++){
+//             answer[i] = -1
+//         for(let j = i-1 ; j >= 0 ; j--){
+//             if(arrS[j] == arrS[i]){
+//                 answer[i] = i - j
+//                 break;
+//             }
+//         }
+//     }
+//     // console.log(answer);
+    
+//     return answer;
+// }
