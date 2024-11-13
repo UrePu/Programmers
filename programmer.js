@@ -1572,7 +1572,7 @@
 // 7	seven
 // 8	eight
 // 9	nine
-solution("1zerotwozero3")
+// solution("1zerotwozero3")
 // function solution(s) {
 //     var arrS = s.split("")
 //     var arrW = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
