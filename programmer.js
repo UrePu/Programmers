@@ -25,7 +25,6 @@
 
 // num % 2 는 num을 2로 나눈 나머지를 뜻함.
 
-
 //2번
 
 // 문제 설명
@@ -40,7 +39,6 @@
 // 예를들어 str이 "1234"이면 1234를 반환하고, "-1234"이면 -1234를 반환하면 됩니다.
 // str은 부호(+,-)와 숫자로만 구성되어 있고, 잘못된 값이 입력되는 경우는 없습니다.
 
-
 // console.log(solution('-1234'));
 
 // function solution(s) {
@@ -49,10 +47,8 @@
 //     return answer;
 // }
 
-
 //parseFloat 는 맨 앞자리가 숫자 or 기호 or 소숫점일 경우 숫자로 변환해서 반환 해준다.
 //사실 애초에 JS는 자동형변환을 지원해서 그냥 return +s 이런식으로 써도 가능하다.
-
 
 //3번
 
@@ -67,7 +63,6 @@
 // [1,2,3,4]	2.5
 // [5,5]	5
 
-
 // console.log(solution([1,2,3,4,5]))
 // function solution(arr) {
 //     console.log(arr)
@@ -77,13 +72,11 @@
 //         sum += arr[i]
 //         a++
 //     }
-    
+
 //     return sum / a;
 // }
 
-
 // 간단히 i 를 0에서 arr의 길이만큼 진행시키고 a에 횟수 sum에 arr[i] 에 해당하는 값을 모두 더해 나누기.
-
 
 //4번
 
@@ -115,7 +108,6 @@
 
 //간단하게 약수란 나눠 떨어지는것임으로 0~n 까지를 전부 나눠보고 나눠떨어지는것을 sum 에 기록.
 
-
 //5번
 
 // 문제 설명
@@ -135,7 +127,6 @@
 
 // 12를 11로 나눈 나머지가 1이고, 11보다 작은 자연수 중에서 문제의 조건을 만족하는 수가 없으므로, 11을 return 해야 합니다.
 
-
 // function solution(n) {
 //     var answer = 0;
 //     for (var i = 1; i <= n;i++){
@@ -147,9 +138,7 @@
 //     return answer;
 // }
 
-
 //간단히 %로 나머지를 도출하고 값이 나올시에 break로 for 문 끝내기.
-
 
 //6번
 
@@ -165,7 +154,6 @@
 // 4	3	[4,8,12]
 // -4	2	[-4, -8]
 
-
 // console.log(solution(2, 5));
 // function solution(x, n) {
 //     var answer = [];
@@ -175,9 +163,7 @@
 //     return answer;
 // }
 
-
 //answer[i-1] 에다가 직접넣기... 이거보단 fill이나 push 가 나을거같다.
-
 
 //7번
 
@@ -198,7 +184,6 @@
 // 입출력 예 #2
 // 9 + 8 + 7 = 24이므로 24를 return 하면 됩니다.
 
-
 // function solution(n)
 // {
 //     var answer = 0;
@@ -211,10 +196,8 @@
 //     return answer;
 // }
 
-
 //정답이긴 하지만 퍼포먼스가 엄청떨어지는거 같다.
 //아래의 코드가 훨씬더 좋게 나오는데 charAt 함수가 별로 좋지않은거 같다.
-
 
 // function solution(n)
 // {
@@ -227,10 +210,8 @@
 //     //return n.toString().split('').reduce((a, b) => (a * 1) + (b * 1));
 // }
 
-
 //열심히 찾아봤는데 오히려 charAt 사용이 split 보다 좋은듯 하다.
 //퍼포먼스가 떨어졌던 이유는 함수내에 기본으로 들어있던 console.log() 한줄 때문이였다.
-
 
 //8번
 
@@ -243,7 +224,6 @@
 // n	return
 // 12345	[5,4,3,2,1]
 
-
 // function solution(n) {
 //     var answer = [];
 //     var str = n + ''
@@ -253,9 +233,7 @@
 //     return answer;
 // }
 
-
 //i를 1부터 str의 길이까지 진행시키고 answer 에 거꾸로 넣기.
-
 
 //9번
 
@@ -280,14 +258,13 @@
 
 // ※ 공지 - 2021년 8월 23일 테스트케이스가 추가되었습니다.
 
-
 // console.log(solution("pPyY"))
 // console.log(solution("pyY"))
 
 // function solution(s){
 //     var answer = true;
 //     var sum1 = 0;
-//     var sum2 = 0;    
+//     var sum2 = 0;
 //     s.split("").map(v => {
 //         // console.log(v);
 //         if ( v == "p" || v == "P"){
@@ -303,10 +280,8 @@
 //     return answer;
 // }
 
-
 //or 함수를 사용하는게 아닌 .toUpperCase() 혹은 .toLowerCase() 를 통해 하나로 통일 해버리면 || 연산자를 안써도 된다.
 //비교할때도 굳이 이렇게 더하는게 아니라 sum 한개로 하는방법도 있다.
-
 
 //10번
 
@@ -332,7 +307,7 @@
 //     var ans = 0;;
 //     for(var i = 1; i <= n; i++){
 //         if (n === i * i){
-//             answer = i + 1; 
+//             answer = i + 1;
 //             break;
 //         }
 //     }
@@ -358,12 +333,12 @@
 //     }else{
 //         for(var i = 0; i <= n; i++){
 //             if (n === i * i){
-//                 answer = i + 1; 
+//                 answer = i + 1;
 //                 break;
 //             }
 //         }
 //     }
-    
+
 //     if(answer == 0){
 //         ans = -1
 //     }else {
@@ -371,7 +346,6 @@
 //     }
 //     return ans;
 // }
-
 
 //11번
 
@@ -384,16 +358,13 @@
 // n	return
 // 118372	873211
 
-
 // function solution(n) {
 //     var answer = "";
 //     (n + "").split("").sort().reverse().map(v => {answer += v})
 //     return Number(answer);
 // }
 
-
 //join ("") 이게 훨씬 빠른거같다.
-
 
 //13번
 
@@ -421,7 +392,6 @@
 // 입출력 예 #4
 // 13의 모든 자릿수의 합은 4입니다. 13은 4로 나누어 떨어지지 않으므로 13은 하샤드 수가 아닙니다.
 
-
 // function solution(x) {
 //     let num = x;
 //     let sum = 0;
@@ -432,7 +402,6 @@
 
 //     return !(num%sum);
 // }
-
 
 //!num%sum 나머지가 있냐 없냐로 판별가능.
 
@@ -457,7 +426,6 @@
 // signs가 [false,false,true] 이므로, 실제 수들의 값은 각각 -1, -2, 3입니다.
 // 따라서 세 수의 합인 0을 return 해야 합니다.
 
-
 // console.log(solution([1,2,3], [false,true,true]));
 // console.log(0 + true)
 
@@ -473,14 +441,13 @@
 //     return answer;
 // }
 
-//for 안에 if문을 넣어서 한건데 음... 
+//for 안에 if문을 넣어서 한건데 음...
 // function solution(absolutes, signs) {
 
 //     return absolutes.reduce((acc, val, i) => acc + (val * (signs[i] ? 1 : -1)), 0);
 // }
 
 //이런것도 있는데 봐도 뭔지 모르겠다.
-
 
 //15번
 // console.log(solution(6))
@@ -524,8 +491,7 @@
 //     return answer;
 // }
 
-//seoul 배열의 모든 인덱스를 
-
+//seoul 배열의 모든 인덱스를
 
 //17번
 
@@ -567,7 +533,6 @@
 //     return answer;
 
 //sort 를 쓰려면 비교하는게 있어야한다는걸 배웠다.
-
 
 //18번
 
@@ -628,8 +593,7 @@
 //     return answer;
 // }
 
-//간단하게 삼항연산자로 표시가능... 
-
+//간단하게 삼항연산자로 표시가능...
 
 //20번
 // 문제 설명
@@ -683,7 +647,6 @@
 
 // a와 b의 내적은 (-1)*1 + 0*0 + 1*(-1) = -2 입니다.
 
-
 // function solution(a, b) {
 //     var answer = 0;
 //     for(var i = 0; i < a.length; i++){
@@ -733,7 +696,6 @@
 // 3	"수박수"
 // 4	"수박수박"
 
-
 // function solution(n) {
 //     var answer = '';
 //     if((n % 2) == 0) {
@@ -749,9 +711,7 @@
 //     return answer;
 // }
 
-
 //24번
-
 
 // 문제 설명
 // 두 정수 left와 right가 매개변수로 주어집니다. left부터 right까지의 모든 수들 중에서
@@ -784,7 +744,6 @@
 // 27	1, 3, 9, 27	4
 // 따라서, 24 - 25 + 26 + 27 = 52를 return 해야 합니다.
 
-
 // // console.log(measure(11));
 // function measure(i){
 //     var ary = []
@@ -796,7 +755,7 @@
 //     if(ary.length % 2){
 //         return +1
 //     }else return -1
-// } 
+// }
 // // console.log(solution(13,17));
 // function solution(left, right) {
 //     var answer = 0;
@@ -806,12 +765,11 @@
 //         ary.push(left + j);
 //     }
 //     ary.forEach(x => answer += measure(x) * x)
-    
+
 //     return answer;
 // }
 
 //제곱수가 정수면 .. 약수가 짝수다.
-
 
 //24번
 
@@ -844,7 +802,6 @@
 
 //어차피 .sort()가 대문자를 앞에 정렬하는거같다.
 //s.split("").sort.reverse.join("") 으로 가능.
-
 
 //25번
 
@@ -881,8 +838,6 @@
 //     return answer;
 // }
 
-
-
 //26번
 
 // 문제 설명
@@ -906,7 +861,6 @@
 
 // console.log(solution('a2334'));
 // console.log(solution("16844"));
-
 
 // function solution(s) {
 //     console.log(Number(s));
@@ -942,7 +896,7 @@
 // // console.log([[1,2] , [2,3]] , [[3,4],[5,6]])
 // function solution(arr1, arr2) {
 //     var answer = [[]];
-    
+
 //     for(var i = 0; i < arr1.length; i++){
 //         var sum = [];
 
@@ -954,7 +908,6 @@
 //     }
 //     return answer;
 // }
-
 
 //num 28
 
@@ -1034,7 +987,7 @@
 // }
 
 // function measMin(a, b,c,d) {
-    
+
 //     var max = 0;
 //     for(var i =0; i < a.length; i++){
 //         for(var j=0; j < b.length; j++){
@@ -1087,7 +1040,7 @@
 //             answer.push(arr[i])
 //         }
 //     }
-    
+
 //     return answer;
 // }
 
@@ -1152,9 +1105,7 @@
 // 125	11122	22111	229
 // 따라서 229를 return 해야 한다.
 
-
 //33번
-
 
 // 문제 설명
 // 숫자로 이루어진 문자열 t와 p가 주어질 때, t에서 p와 길이가 같은 부분문자열 중에서, 이 부분문자열이 나타내는 수가 p가 나타내는 수보다 작거나 같은 것이 나오는 횟수를 return하는 함수 solution을 완성하세요.
@@ -1186,32 +1137,27 @@
 //     var arrP = (p + "").split("");
 //     var arrT = (t + "").split("");
 //     var arrX = []
-    
-    
+
 //     for(let i = 0 ; i <= arrT.length - arrP.length ; i ++){
 //         var a = [];
 //         for(let j = 0 ; j < arrP.length; j++){
 //             a.push(arrT[i + j])
 //         }
 //         var b = a.join("")*1
-//         arrX.push(b)    
+//         arrX.push(b)
 
 //     }
 //     // console.log(arrX);
-    
+
 //     arrX.forEach(x => {
 //         // console.log(x)
 //         if(x <= p){
 //             answer += 1;
 //         }
 //     });
-    
-    
-    
-   
+
 //     // console.log(answer);
-    
-    
+
 //     return answer;
 // }
 
@@ -1245,10 +1191,10 @@
 // function solution(s) {
 //     return s
 //         .split(" ")
-//         .map(word => 
+//         .map(word =>
 //             word
 //                 .split("")
-//                 .map((char, index) => 
+//                 .map((char, index) =>
 //                     index % 2 === 0 ? char.toUpperCase() : char.toLowerCase()
 //                 )
 //                 .join("")
@@ -1307,14 +1253,13 @@
 //         n = Math.floor(n / 3)
 //     }
 //     // console.log(arrN);
-    
+
 //     for(let i = 0; i < arrN.length ; i ++){
 //         answer += arrN[i] * 3**(arrN.length -1 - i)
 //         console.log(3**(arrN.length - i));
-        
+
 //     }
 //     // console.log(answer);
-    
 
 //     return answer;
 // }
@@ -1340,7 +1285,7 @@
 // solution([-2, 3, 0, 2, -5])
 // function solution(number) {
 //     var answer = 0;
-    
+
 //     for(let i = 0 ; i < number.length-2 ; i++){
 //         for(let j = i + 1; j < number.length -1; j++){
 //                 for(let x = j + 1; x < number.length; x ++){
@@ -1351,7 +1296,7 @@
 //             }
 //         }
 //     // console.log(answer);
-    
+
 //     return answer;
 // }
 
@@ -1392,17 +1337,17 @@
 //     for(var i = 0; i < sizes.length; i++){
 //         if(w < sizes[i][0]) w = sizes[i][0]
 //         if(h < sizes[i][1]) h = sizes[i][1]
-        
+
 //     }
 //     answer = h * w
-    
+
 //     return answer;
 // }
 
-//문제 38 
+//문제 38
 // 문제 설명
 // 어떤 문장의 각 알파벳을 일정한 거리만큼 밀어서 다른 알파벳으로 바꾸는 암호화 방식을 시저 암호라고 합니다.
-//  예를 들어 "AB"는 1만큼 밀면 "BC"가 되고, 3만큼 밀면 "DE"가 됩니다. "z"는 1만큼 밀면 "a"가 됩니다. 
+//  예를 들어 "AB"는 1만큼 밀면 "BC"가 되고, 3만큼 밀면 "DE"가 됩니다. "z"는 1만큼 밀면 "a"가 됩니다.
 // 문자열 s와 거리 n을 입력받아 s를 n만큼 민 암호문을 만드는 함수, solution을 완성해 보세요.
 
 // 제한 조건
@@ -1421,7 +1366,6 @@
 // const c = " ";
 // console.log(c.charCodeAt(0)); // 32
 
-
 // function solution(s, n) {
 //     var arrS = s.split('')
 //     var i = 0;
@@ -1437,16 +1381,15 @@
 //                     word = word- 26
 //                     arrS[i] = String.fromCharCode(word);
 //                 }else {arrS[i] = String.fromCharCode(word);
-//             }  
+//             }
 //         }
 //        i++
 //     }
 //     var answer = arrS.join("");
 //     console.log(answer);
-    
+
 //     return answer;
 // }
-
 
 // function solution(s, n) {
 //     var arrS = s.split('');
@@ -1467,7 +1410,6 @@
 // }
 
 // 좀더 깔끔한 범위 구분이 필요할것으로 보임.
-
 
 //문제 39
 
@@ -1490,25 +1432,25 @@
 //     for(let i = 0; i < answer.length ; i++){
 //         for(let j = 0; j < answer.length; j++){
 //             if(answer[i] == answer[j] && i !== j){
-                
+
 //                 answer.splice(j,1)
 //             }
 //         }
 //     }
 //     answer = answer.sort((a, b) => a - b)
 //     return answer;
-    
+
 // }
 
 // function solution(numbers) {
 //     const sums = new Set();
-    
+
 //     for (let i = 0; i < numbers.length - 1; i++) {
 //         for (let j = i + 1; j < numbers.length; j++) {
 //             sums.add(numbers[i] + numbers[j]);
 //         }
 //     }
-    
+
 //     // Set을 Array로 변환하고 정렬
 //     return Array.from(sums).sort((a, b) => a - b);
 // }
@@ -1543,10 +1485,9 @@
 //         }
 //     }
 //     // console.log(answer);
-    
+
 //     return answer;
 // }
-
 
 //문제 41
 
@@ -1580,9 +1521,9 @@
 //     var answer = '';
 //     for(let i = 0; i < arrS.length; i++){
 //         if(arrS[i] * 1 >= 0){
-//             answer += arrS[i] 
+//             answer += arrS[i]
 //             // console.log(i);
-                       
+
 //         }else {
 //             word += arrS[i]
 //             if(word.length > 2){
@@ -1595,13 +1536,13 @@
 //                     }
 //                 }
 //             }
-            
+
 //         }
 //     }
 
 //     answer = Number(answer)
 //     // console.log(answer);
-    
+
 //     return answer;
 // }
 
@@ -1620,15 +1561,15 @@
 //문제 42
 
 // 문제 설명
-// 수웅이는 매달 주어진 음식을 빨리 먹는 푸드 파이트 대회를 개최합니다. 이 대회에서 선수들은 1대 1로 대결하며, 
+// 수웅이는 매달 주어진 음식을 빨리 먹는 푸드 파이트 대회를 개최합니다. 이 대회에서 선수들은 1대 1로 대결하며,
 //매 대결마다 음식의 종류와 양이 바뀝니다. 대결은 준비된 음식들을 일렬로 배치한 뒤, 한 선수는 제일 왼쪽에 있는 음식부터 오른쪽으로,
 // 다른 선수는 제일 오른쪽에 있는 음식부터 왼쪽으로 순서대로 먹는 방식으로 진행됩니다. 중앙에는 물을 배치하고, 물을 먼저 먹는 선수가 승리하게 됩니다.
 
-// 이때, 대회의 공정성을 위해 두 선수가 먹는 음식의 종류와 양이 같아야 하며, 음식을 먹는 순서도 같아야 합니다. 
+// 이때, 대회의 공정성을 위해 두 선수가 먹는 음식의 종류와 양이 같아야 하며, 음식을 먹는 순서도 같아야 합니다.
 //또한, 이번 대회부터는 칼로리가 낮은 음식을 먼저 먹을 수 있게 배치하여 선수들이 음식을 더 잘 먹을 수 있게 하려고 합니다.
 // 이번 대회를 위해 수웅이는 음식을 주문했는데, 대회의 조건을 고려하지 않고 음식을 주문하여 몇 개의 음식은 대회에 사용하지 못하게 되었습니다.
 
-// 예를 들어, 3가지의 음식이 준비되어 있으며, 칼로리가 적은 순서대로 1번 음식을 3개, 2번 음식을 4개, 3번 음식을 6개 준비했으며, 
+// 예를 들어, 3가지의 음식이 준비되어 있으며, 칼로리가 적은 순서대로 1번 음식을 3개, 2번 음식을 4개, 3번 음식을 6개 준비했으며,
 //물을 편의상 0번 음식이라고 칭한다면, 두 선수는 1번 음식 1개, 2번 음식 2개, 3번 음식 3개씩을 먹게 되므로 음식의 배치는 "1223330333221"이 됩니다.
 // 따라서 1번 음식 1개는 대회에 사용하지 못합니다.
 
@@ -1659,12 +1600,12 @@
 //     for(let i = arrF.length; i > 0; i--){
 //         for(let j = 0; j < arrF[i - 1]; j++){
 //             // console.log(i);
-            
+
 //             answer += i
 //         }
-//     }  
+//     }
 //         //   console.log(answer);
-        
+
 //     return answer;
 // }
 
@@ -1684,7 +1625,7 @@
 
 // solution(	["abce", "abcd", "cdx"], 2)
 
-// function solution(strings, n) {   
+// function solution(strings, n) {
 //     var answer = [];
 //     var arrW = [[]];
 //     for(let i = 0; i < strings.length; i++){
@@ -1695,7 +1636,7 @@
 //         answer.push(arrW[i][1])
 //     }
 //     console.log(answer);
-    
+
 //     return answer;
 // }
 
@@ -1709,7 +1650,7 @@
 // array의 2번째부터 5번째까지 자르면 [5, 2, 6, 3]입니다.
 // 1에서 나온 배열을 정렬하면 [2, 3, 5, 6]입니다.
 // 2에서 나온 배열의 3번째 숫자는 5입니다.
-// 배열 array, [i, j, k]를 원소로 가진 2차원 배열 commands가 매개변수로 주어질 때, commands의 
+// 배열 array, [i, j, k]를 원소로 가진 2차원 배열 commands가 매개변수로 주어질 때, commands의
 // 모든 원소에 대해 앞서 설명한 연산을 적용했을 때 나온 결과를 배열에 담아 return 하도록 solution 함수를 작성해주세요.
 
 // 제한사항
@@ -1726,16 +1667,16 @@
 //             arrN.push(array[j])
 //         }
 //         arrN = arrN.sort((a,b) => a - b);
-//         answer.push(arrN[commands[i][2] - 1])        
+//         answer.push(arrN[commands[i][2] - 1])
 //     }
 //     // console.log(answer);
-    
+
 //     return answer;
 // }
 
 // 문제 45
 
-// 빈 병 a개를 가져다주면 콜라 b병을 주는 마트가 있을 때, 빈 병 n개를 가져다주면 몇 병을 받을 수 있는지 계산하는 문제입니다. 
+// 빈 병 a개를 가져다주면 콜라 b병을 주는 마트가 있을 때, 빈 병 n개를 가져다주면 몇 병을 받을 수 있는지 계산하는 문제입니다.
 
 // 기존 콜라 문제와 마찬가지로, 보유 중인 빈 병이 a개 미만이면, 추가적으로 빈 병을 받을 순 없습니다. 상빈이는 열심히 고심했지만,
 //  일반화된 콜라 문제의 답을 찾을 수 없었습니다. 상빈이를 도와, 일반화된 콜라 문제를 해결하는 프로그램을 만들어 주세요.
@@ -1760,6 +1701,6 @@
 //         }
 //     }
 //     console.log(answer);
-    
-//     return answer;  
+
+//     return answer;
 // }
