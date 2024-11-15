@@ -1717,18 +1717,18 @@
 // array의 각 원소는 1 이상 100 이하입니다.
 // commands의 길이는 1 이상 50 이하입니다.
 // commands의 각 원소는 길이가 3입니다.
-solution([1, 5, 2, 6, 3, 7, 4], [[2, 5, 3], [4, 4, 1], [1, 7, 3]])
-function solution(array, commands) {
-    var answer = [];
-    for(let i = 0; i < commands.length; i++){
-        var arrN = []
-        for(let j = commands[i][0] - 1 ; j < commands[i][1]  ; j++){
-            arrN.push(array[j])
-        }
-        arrN = arrN.sort((a,b) => a - b);
-        answer.push(arrN[commands[i][2] - 1])        
-    }
-    // console.log(answer);
+// solution([1, 5, 2, 6, 3, 7, 4], [[2, 5, 3], [4, 4, 1], [1, 7, 3]])
+// function solution(array, commands) {
+//     var answer = [];
+//     for(let i = 0; i < commands.length; i++){
+//         var arrN = []
+//         for(let j = commands[i][0] - 1 ; j < commands[i][1]  ; j++){
+//             arrN.push(array[j])
+//         }
+//         arrN = arrN.sort((a,b) => a - b);
+//         answer.push(arrN[commands[i][2] - 1])        
+//     }
+//     // console.log(answer);
     
-    return answer;
-}
+//     return answer;
+// }
