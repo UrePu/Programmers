@@ -1728,8 +1728,46 @@
 // arr1, arr2는 길이 n인 정수 배열로 주어진다.
 // 정수 배열의 각 원소 x를 이진수로 변환했을 때의 길이는 n 이하이다. 즉, 0 ≦ x ≦ 2n - 1을 만족한다.
 
-function solution(n, arr1, arr2) {
-  var answer = [];
+// solution(5, [9, 20, 28, 18, 11], [30, 1, 21, 17, 28]);
+// function solution(n, arr1, arr2) {
+//   var answer = [];
+//   for (let i = 0; i < arr1.length; i++) {
+//     arr1[i] = arr1[i].toString(2);
+//     arr2[i] = arr2[i].toString(2);
+//   }
 
-  return answer;
-}
+//   for (let i = 0; i < n; i++) {
+//     let a = arr1[i].split("");
+//     if (arr1[i].length < n) {
+//       for (let j = 0; j < n - arr1[i].length; j++) {
+//         a.unshift("0");
+//       }
+//     }
+//     arr1[i] = a;
+
+//     let b = arr2[i].split("");
+//     if (arr2[i].length < n) {
+//       for (let j = 0; j < n - arr2[i].length; j++) {
+//         b.unshift("0");
+//       }
+//     }
+//     arr2[i] = b;
+//   }
+
+//   // console.log(arr1, arr2);
+
+//   for (let i = 0; i < n; i++) {
+//     let sharp = "";
+//     for (let j = 0; j < n; j++) {
+//       if (arr1[i][j] + arr2[i][j] > 0) {
+//         sharp += "#";
+//       } else {
+//         sharp += " ";
+//       }
+//     }
+//     answer.push(sharp);
+//   }
+//   // console.log(answer);
+
+//   return answer;
+// }
