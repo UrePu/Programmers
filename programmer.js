@@ -1791,3 +1791,28 @@
 // 3 ≤ k ≤ 100
 // 7 ≤ score의 길이 ≤ 1,000
 // 0 ≤ score[i] ≤ 2,000
+
+// solution(3, [10, 100, 20, 150, 1, 100, 200]);
+// function solution(k, score) {
+//   var answer = [];
+//   var auth = [];
+//   for (let i = 0; i < score.length; i++) {
+//     if (auth.length < k) {
+//       auth.push(score[i]);
+//       auth.sort((a, b) => a - b);
+//       answer.push(auth[0]);
+//     } else {
+//       for (let j = 0; j < auth.length; j++) {
+//         if (auth[j] < score[i]) {
+//           auth[j] = score[i];
+//           break;
+//         }
+//       }
+//       auth.sort((a, b) => a - b);
+//       answer.push(auth[0]);
+//     }
+//   }
+// //   console.log(answer);
+
+//   return answer;
+// }
