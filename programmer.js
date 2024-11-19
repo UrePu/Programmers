@@ -1816,3 +1816,90 @@
 
 //   return answer;
 // }
+
+//문제 48
+
+// 문제 설명
+// 사진들을 보며 추억에 젖어 있던 루는 사진별로 추억 점수를 매길려고 합니다. 사진 속에 나오는 인물의 그리움 점수를 모두 합산한 값이 해당 사진의 추억 점수가 됩니다.
+// 예를 들어 사진 속 인물의 이름이 ["may", "kein", "kain"]이고 각 인물의 그리움 점수가 [5점, 10점, 1점]일 때 해당 사진의 추억 점수는 16(5 + 10 + 1)점이 됩니다.
+// 다른 사진 속 인물의 이름이 ["kali", "mari", "don", "tony"]이고 ["kali", "mari", "don"]의 그리움 점수가 각각 [11점, 1점, 55점]]이고, "tony"는 그리움 점수가 없을 때,
+// 이 사진의 추억 점수는 3명의 그리움 점수를 합한 67(11 + 1 + 55)점입니다.
+
+// 그리워하는 사람의 이름을 담은 문자열 배열 name, 각 사람별 그리움 점수를 담은 정수 배열 yearning, 각 사진에 찍힌 인물의 이름을 담은 이차원 문자열 배열 photo가 매개변수로 주어질 때,
+// 사진들의 추억 점수를 photo에 주어진 순서대로 배열에 담아 return하는 solution 함수를 완성해주세요.
+
+// 제한사항
+// 3 ≤ name의 길이 = yearning의 길이≤ 100
+// 3 ≤ name의 원소의 길이 ≤ 7
+// name의 원소들은 알파벳 소문자로만 이루어져 있습니다.
+// name에는 중복된 값이 들어가지 않습니다.
+// 1 ≤ yearning[i] ≤ 100
+// yearning[i]는 i번째 사람의 그리움 점수입니다.
+// 3 ≤ photo의 길이 ≤ 100
+// 1 ≤ photo[i]의 길이 ≤ 100
+// 3 ≤ photo[i]의 원소(문자열)의 길이 ≤ 7
+// photo[i]의 원소들은 알파벳 소문자로만 이루어져 있습니다.
+// photo[i]의 원소들은 중복된 값이 들어가지 않습니다.
+
+// solution(
+//   ["kali", "mari", "don"],
+//   [11, 1, 55],
+//   [
+//     ["kali", "mari", "don"],
+//     ["pony", "tom", "teddy"],
+//     ["con", "mona", "don"],
+//   ]
+// );
+
+// function solution(name, yearning, photo) {
+//   var answer = [];
+//   for (let i = 0; i < photo.length; i++) {
+//     //photo 전체길이
+//     let sum = 0;
+//     for (let j = 0; j < name.length; j++) {
+//       //name 길이
+//       for (let k = 0; k < photo[i].length; k++) {
+//         //photo[i] 길이
+//         if (name[j] === photo[i][k]) {
+//           sum += yearning[j];
+//           break;
+//         }
+//       }
+//     }
+//     answer.push(sum);
+//   }
+//   //   console.log(answer);
+
+//   return answer;
+// }
+
+// function solution(name, yearning, photo) {
+//   return photo.map((v) =>
+//     v.reduce((a, c) => (a += yearning[name.indexOf(c)] ?? 0), 0)
+//   );
+// }
+
+//문제 49
+
+// 문제 설명
+// 코니는 영어 단어가 적힌 카드 뭉치 두 개를 선물로 받았습니다. 코니는 다음과 같은 규칙으로 카드에 적힌 단어들을 사용해 원하는 순서의 단어 배열을 만들 수 있는지 알고 싶습니다.
+
+// 원하는 카드 뭉치에서 카드를 순서대로 한 장씩 사용합니다.
+// 한 번 사용한 카드는 다시 사용할 수 없습니다.
+// 카드를 사용하지 않고 다음 카드로 넘어갈 수 없습니다.
+// 기존에 주어진 카드 뭉치의 단어 순서는 바꿀 수 없습니다.
+// 예를 들어 첫 번째 카드 뭉치에 순서대로 ["i", "drink", "water"], 두 번째 카드 뭉치에 순서대로 ["want", "to"]가 적혀있을 때 ["i", "want", "to", "drink", "water"]
+// 순서의 단어 배열을 만들려고 한다면 첫 번째 카드 뭉치에서 "i"를 사용한 후 두 번째 카드 뭉치에서 "want"와 "to"를 사용하고
+//  첫 번째 카드뭉치에 "drink"와 "water"를 차례대로 사용하면 원하는 순서의 단어 배열을 만들 수 있습니다.
+
+// 문자열로 이루어진 배열 cards1, cards2와 원하는 단어 배열 goal이 매개변수로 주어질 때, cards1과 cards2에 적힌 단어들로 goal를 만들 있다면 "Yes"를,
+//  만들 수 없다면 "No"를 return하는 solution 함수를 완성해주세요.
+
+// 제한사항
+// 1 ≤ cards1의 길이, cards2의 길이 ≤ 10
+// 1 ≤ cards1[i]의 길이, cards2[i]의 길이 ≤ 10
+// cards1과 cards2에는 서로 다른 단어만 존재합니다.
+// 2 ≤ goal의 길이 ≤ cards1의 길이 + cards2의 길이
+// 1 ≤ goal[i]의 길이 ≤ 10
+// goal의 원소는 cards1과 cards2의 원소들로만 이루어져 있습니다.
+// cards1, cards2, goal의 문자열들은 모두 알파벳 소문자로만 이루어져 있습니다.
