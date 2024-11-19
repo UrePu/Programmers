@@ -1902,4 +1902,24 @@
 // 2 ≤ goal의 길이 ≤ cards1의 길이 + cards2의 길이
 // 1 ≤ goal[i]의 길이 ≤ 10
 // goal의 원소는 cards1과 cards2의 원소들로만 이루어져 있습니다.
-// cards1, cards2, goal의 문자열들은 모두 알파벳 소문자로만 이루어져 있습니다.
+// cards1, cards2, goal의 문자열들은 모두 알파벳 소문자로만 이루어져 있습니다.'
+
+// solution(["a", "b"], ["c"], ["b"]);
+
+// function solution(cards1, cards2, goal) {
+//     var answer = "Yes";
+//     let i = 0, j = 0;
+
+//     for (let k = 0; k < goal.length; k++) {
+//       if (i < cards1.length && goal[k] === cards1[i]) {
+//         i++; // cards1에서 해당 카드 사용
+//       } else if (j < cards2.length && goal[k] === cards2[j]) {
+//         j++; // cards2에서 해당 카드 사용
+//       } else {
+//         answer = "No"; // goal의 카드가 cards1 또는 cards2에 없으면 No
+//         break;
+//       }
+//     }
+
+//     return answer;
+//   }
