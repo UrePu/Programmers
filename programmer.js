@@ -1,4 +1,4 @@
- //1번
+//1번
 
 // 문제 설명
 // 정수 num이 짝수일 경우 "Even"을 반환하고 홀수인 경우 "Odd"를 반환하는 함수, solution을 완성해주세요.
@@ -1970,3 +1970,13 @@
 // 2016년은 윤년입니다.
 // 2016년 a월 b일은 실제로 있는 날입니다.
 //  (13월 26일이나 2월 45일같은 날짜는 주어지지 않습니다
+// solution(5, 24);
+// function solution(a, b) {
+//   let answer;
+//   const day = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+//   const date = new Date(2016, a - 1, b);
+//   const targetWeekday = date.getDay();
+//   answer = day[targetWeekday];
+
+//   return answer;
+// }
