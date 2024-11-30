@@ -2001,3 +2001,43 @@
 // 1 ≤ number ≤ 100,000
 // 2 ≤ limit ≤ 100
 // 1 ≤ power ≤ limit
+
+// solution(10, 3, 2);
+// function solution(number, limit, power) {
+//   var answer = 0;
+//   let arr = [];
+//   arr.push(1);
+//   for (let i = 2; i <= number; i++) {
+//     let num = Math.sqrt(i);
+//     if (num % 1 == 0) {
+//       let a = 0;
+//       for (let j = 2; j < num; j++) {
+//         if (i % j == 0) {
+//           // console.log(" " + j);
+
+//           a++;
+//         }
+//       }
+//       arr.push(a * 2 + 1 + 2);
+//     } else {
+//       let a = 0;
+//       for (let j = 2; j < num; j++) {
+//         if (i % j == 0) {
+//           a++;
+//         }
+//       }
+//       arr.push(a * 2 + 2);
+//     }
+//   }
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > limit) {
+//       arr[i] = power;
+//     }
+//   }
+//   //   console.log(arr);
+//   arr.map((x) => {
+//     answer += x;
+//   });
+//   //   console.log(answer);
+//   return answer;
+// }
