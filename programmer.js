@@ -2062,24 +2062,24 @@
 // 문제의 정답은 1, 2, 3, 4, 5중 하나입니다.
 // 가장 높은 점수를 받은 사람이 여럿일 경우, return하는 값을 오름차순 정렬해주세요.
 
-solution([1, 1, 1]);
-function solution(answers) {
-  const patterns = [
-    [1, 2, 3, 4, 5],
-    [2, 1, 2, 3, 2, 4, 2, 5],
-    [3, 3, 1, 1, 2, 2, 4, 4, 5, 5],
-  ];
+// solution([1, 1, 1]);
+// function solution(answers) {
+//   const patterns = [
+//     [1, 2, 3, 4, 5],
+//     [2, 1, 2, 3, 2, 4, 2, 5],
+//     [3, 3, 1, 1, 2, 2, 4, 4, 5, 5],
+//   ];
 
-  const scores = [0, 0, 0];
-  answers.forEach((answer, idx) => {
-    patterns.forEach((pattern, pIdx) => {
-      if (answer === pattern[idx % pattern.length]) {
-        scores[pIdx]++;
-      }
-    });
-  });
-  const maxScore = Math.max(...scores);
-  return scores
-    .map((score, idx) => (score === maxScore ? idx + 1 : null))
-    .filter((person) => person !== null);
-}
+//   const scores = [0, 0, 0];
+//   answers.forEach((answer, idx) => {
+//     patterns.forEach((pattern, pIdx) => {
+//       if (answer === pattern[idx % pattern.length]) {
+//         scores[pIdx]++;
+//       }
+//     });
+//   });
+//   const maxScore = Math.max(...scores);
+//   return scores
+//     .map((score, idx) => (score === maxScore ? idx + 1 : null))
+//     .filter((person) => person !== null);
+// }
