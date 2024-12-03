@@ -2105,3 +2105,32 @@
 // 7 ≤ score의 길이 ≤ 1,000,000
 // 1 ≤ score[i] ≤ k
 // 이익이 발생하지 않는 경우에는 0을 return 해주세요.
+// solution(3, 4, [1, 2, 3, 1, 2, 3]);
+// function solution(k, m, score) {
+//   var answer = 0;
+//   let arr1 = [];
+//   let sortScore = score.sort((a, b) => a - b);
+
+//   for (let i = 0; i < Math.floor(score.length / m); i++) {
+//     let arr2 = [];
+//     for (
+//       let j = score.length - 1 - m * i;
+//       j > score.length - 1 - m * 1 - m * i;
+//       j--
+//     ) {
+//       arr2.push(sortScore[j]);
+//     }
+//     arr1[i] = arr2;
+//   }
+//   arr1.map((x) => {
+//     let Min = Math.min(...x);
+//     if (isNaN(Min)) {
+//       answer += x[0] * m;
+//     } else {
+//       answer += Min * m;
+//     }
+//   });
+//   //   console.log(answer);
+
+//   return answer;
+// }
