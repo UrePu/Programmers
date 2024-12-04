@@ -2134,3 +2134,53 @@
 
 //   return answer;
 // }
+
+//문제 55
+
+// 문제 설명
+// 1부터 입력받은 숫자 n 사이에 있는 소수의 개수를 반환하는 함수, solution을 만들어 보세요.
+
+// 소수는 1과 자기 자신으로만 나누어지는 수를 의미합니다.
+// (1은 소수가 아닙니다.)
+
+// 제한 조건
+// n은 2이상 1000000이하의 자연수입니다.
+// 입출력 예
+// solution(10);
+// function solution(n) {
+//   let answer = 0;
+//   for (let i = 2; i <= n; i++) {
+//     if (i <= 3) {
+//       answer++;
+//     } else {
+//       let a = Math.floor(Math.sqrt(i));
+//       for (let j = 2; j <= a; j++) {
+//         if (i % j == 0) {
+//           break;
+//         } else if (j >= a) {
+//           answer++;
+//         }
+//       }
+//     }
+//   }
+//     console.log(answer);
+
+//   return answer;
+// }
+
+// function solution(n) {
+//     if (n < 2) return 0; // 2 미만이면 소수는 없음
+
+//     let isPrime = Array(n + 1).fill(true); // 모든 숫자를 소수로 가정
+//     isPrime[0] = isPrime[1] = false; // 0과 1은 소수가 아님
+
+//     for (let i = 2; i * i <= n; i++) {
+//       if (isPrime[i]) {
+//         for (let j = i * i; j <= n; j += i) {
+//           isPrime[j] = false; // i의 배수는 소수가 아님
+//         }
+//       }
+//     }
+
+//     return isPrime.filter(Boolean).length; // true 값의 개수를 반환
+//   }
