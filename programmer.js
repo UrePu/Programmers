@@ -2195,3 +2195,31 @@
 // 제한사항
 // nums에 들어있는 숫자의 개수는 3개 이상 50개 이하입니다.
 // nums의 각 원소는 1 이상 1,000 이하의 자연수이며, 중복된 숫자가 들어있지 않습니다.
+
+// solution([1, 2, 3, 4]);
+// function solution(nums) {
+//   var answer = 0;
+//   let arr1 = [];
+//   for (let i = 0; i < nums.length - 2; i++) {
+//     for (let j = i + 1; j < nums.length - 1; j++) {
+//       for (let k = j + 1; k < nums.length; k++) {
+//         arr1.push(nums[i] + nums[j] + nums[k]);
+//       }
+//     }
+//   }
+//   arr1.map((x, i) => {
+//     let a = true;
+//     for (let j = 2; j * j <= x; j++) {
+//       if (x % j == 0) {
+//         a = false;
+//         break;
+//       }
+//     }
+//     if (a) {
+//       answer++;
+//     }
+//   });
+//   console.log(answer);
+
+//   return answer;
+// }
