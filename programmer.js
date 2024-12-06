@@ -2207,7 +2207,7 @@
 //       }
 //     }
 //   }
-//   arr1.map((x, i) => {
+//   arr1.map((x) => {
 //     let a = true;
 //     for (let j = 2; j * j <= x; j++) {
 //       if (x % j == 0) {
@@ -2249,3 +2249,5 @@
 
 //     return answer;
 //   }
+
+//문제 55
