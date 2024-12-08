@@ -2277,3 +2277,26 @@
 // section의 원소는 페인트를 다시 칠해야 하는 구역의 번호입니다.
 // section에서 같은 원소가 두 번 이상 나타나지 않습니다.
 // section의 원소는 오름차순으로 정렬되어 있습니다.
+solution(8, 4, [2, 3, 6]);
+function solution(n, m, section) {
+  let answer = 0;
+  if (n == m) {
+    answer = 1;
+  } else {
+    for (let i = 0; i < section.length - 1; i++) {
+      if (section[i + 1] - section[i] + 1 <= m) {
+        let j = i + 1;
+        while (true) {
+          if (section[j] - section[i] + 1 > m) {
+            answer++;
+            i = j;
+            break;
+          }
+          j++;
+        }
+      }
+    }
+  }
+  console.log(answer);
+  return answer;
+}
