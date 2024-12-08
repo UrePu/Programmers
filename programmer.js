@@ -2283,7 +2283,7 @@ function solution(n, m, section) {
   if (n == m) {
     answer = 1;
   } else {
-    for (let i = 0; i < section.length - 1; i++) {
+    for (let i = 0; i < section.length; i++) {
       if (section[i + 1] - section[i] + 1 <= m) {
         let j = i + 1;
         while (true) {
@@ -2294,6 +2294,8 @@ function solution(n, m, section) {
           }
           j++;
         }
+      } else {
+        answer++;
       }
     }
   }
