@@ -2277,28 +2277,68 @@
 // section의 원소는 페인트를 다시 칠해야 하는 구역의 번호입니다.
 // section에서 같은 원소가 두 번 이상 나타나지 않습니다.
 // section의 원소는 오름차순으로 정렬되어 있습니다.
-solution(8, 4, [2, 3, 6]);
-function solution(n, m, section) {
-  let answer = 0;
-  if (n == m) {
-    answer = 1;
-  } else {
-    for (let i = 0; i < section.length; i++) {
-      if (section[i + 1] - section[i] + 1 <= m) {
-        let j = i + 1;
-        while (true) {
-          if (section[j] - section[i] + 1 > m) {
-            answer++;
-            i = j;
-            break;
-          }
-          j++;
-        }
-      } else {
-        answer++;
-      }
-    }
-  }
-  console.log(answer);
-  return answer;
-}
+
+// solution(5, 4, [1, 3]);
+// function solution(n, m, section) {
+//   let answer = 0;
+//   let i = 0;
+
+//   while (i < section.length) {
+//     let start = section[i];
+//     answer++;
+
+//     while (i < section.length && section[i] < start + m) {
+//       i++;
+//     }
+//   }
+
+//   // console.log(answer);
+//   return answer;
+// }
+
+//문제 56
+
+// 문제 설명
+// 머쓱이는 태어난 지 11개월 된 조카를 돌보고 있습니다.
+//  조카는 아직 "aya", "ye", "woo", "ma" 네 가지 발음과 네 가지 발음을 조합해서 만들 수 있는 발음밖에 하지 못하고 연속해서 같은 발음을 하는 것을 어려워합니다.
+//   문자열 배열 babbling이 매개변수로 주어질 때, 머쓱이의 조카가 발음할 수 있는 단어의 개수를 return하도록 solution 함수를 완성해주세요.
+
+// 제한사항
+// 1 ≤ babbling의 길이 ≤ 100
+// 1 ≤ babbling[i]의 길이 ≤ 30
+// 문자열은 알파벳 소문자로만 이루어져 있습니다.
+
+// solution(["ayaye", "uuu", "yeye", "yemawoo", "ayaayaa"]);
+// function solution(babbling) {
+//   var answer = 0;
+//   let can = ["aya", "ye", "woo", "ma"];
+//   babbling.forEach((word) => {
+//     let isValid = true;
+//     let pWord = "";
+//     while (word.length > 0 && isValid) {
+//       let found = false;
+//       for (let vWord of can) {
+//         if (word.startsWith(vWord)) {
+//           if (pWord === vWord) {
+//             isValid = false;
+//             break;
+//           }
+//           word = word.slice(vWord.length);
+//           pWord = vWord;
+//           found = true;
+//           break;
+//         }
+//       }
+
+//       if (!found) {
+//         isValid = false;
+//       }
+//       if (word.length == 0 && isValid) {
+//         answer++;
+//       }
+//     }
+//   });
+//   console.log(answer);
+
+//   return answer;
+// }
