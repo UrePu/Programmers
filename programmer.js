@@ -2368,7 +2368,7 @@
 // 스테이지에 도달한 유저가 없는 경우 해당 스테이지의 실패율은 0 으로 정의한다.
 
 function solution(N, stages) {
-  var answer = [];
+  var answer = [1];
 
   return answr;
 }
