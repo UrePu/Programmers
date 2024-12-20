@@ -2367,29 +2367,29 @@
 // 만약 실패율이 같은 스테이지가 있다면 작은 번호의 스테이지가 먼저 오도록 하면 된다.
 // 스테이지에 도달한 유저가 없는 경우 해당 스테이지의 실패율은 0 으로 정의한다.
 
-solution(5, [2, 1, 2, 6, 2, 4, 3, 3]);
-//1 ~ N 까지의 수를 filter로 검사하여 stages 안에 값이 1~n 보다 크면 갯수 확인
+// solution(5, [2, 1, 2, 6, 2, 4, 3, 3]);
+// //1 ~ N 까지의 수를 filter로 검사하여 stages 안에 값이 1~n 보다 크면 갯수 확인
 
-function solution(N, stages) {
-  const stageFailureRates = [];
-  let totalPlayers = stages.length;
+// function solution(N, stages) {
+//   const stageFailureRates = [];
+//   let totalPlayers = stages.length;
 
-  for (let i = 1; i <= N; i++) {
-    const currentStagePlayers = stages.filter((stage) => stage === i).length; // 현재 스테이지에서 멈춘 플레이어 수
-    const failureRate = currentStagePlayers / totalPlayers || 0; // 실패율 계산 (0으로 나누는 경우 방지)
-    stageFailureRates.push({ stage: i, failureRate });
-    totalPlayers -= currentStagePlayers; // 다음 스테이지로 넘어간 플레이어 수
-  }
+//   for (let i = 1; i <= N; i++) {
+//     const currentStagePlayers = stages.filter((stage) => stage === i).length; // 현재 스테이지에서 멈춘 플레이어 수
+//     const failureRate = currentStagePlayers / totalPlayers || 0; // 실패율 계산 (0으로 나누는 경우 방지)
+//     stageFailureRates.push({ stage: i, failureRate });
+//     totalPlayers -= currentStagePlayers; // 다음 스테이지로 넘어간 플레이어 수
+//   }
 
-  // 실패율 내림차순, 스테이지 번호 오름차순 정렬
-  stageFailureRates.sort((a, b) => {
-    if (b.failureRate === a.failureRate) {
-      return a.stage - b.stage;
-    }
-    return b.failureRate - a.failureRate;
-  });
-  console.log(stageFailureRates);
+//   // 실패율 내림차순, 스테이지 번호 오름차순 정렬
+//   stageFailureRates.sort((a, b) => {
+//     if (b.failureRate === a.failureRate) {
+//       return a.stage - b.stage;
+//     }
+//     return b.failureRate - a.failureRate;
+//   });
+//   console.log(stageFailureRates);
 
-  // 스테이지 번호만 반환
-  return stageFailureRates.map((item) => item.stage);
-}
+//   // 스테이지 번호만 반환
+//   return stageFailureRates.map((item) => item.stage);
+// }
