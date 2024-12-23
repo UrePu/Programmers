@@ -2419,3 +2419,67 @@
 // 출력 형식
 // 3번의 기회에서 얻은 점수 합계에 해당하는 정수값을 출력한다.
 // 예) 37
+
+// 숫자를 기준으로 숫자 앞을 잘라서 여러개로 나눈담에 숫자는 무시하고 뒤에 애들만 계산 하면될?듯
+// 숫자와 그 뒤의 문자 패턴 매칭
+// console.log(solution("1D#2S*3S"));
+// //5?
+
+// function solution(dartResult) {
+//   var answer = 0;
+//   const input = dartResult;
+//   const result = input.match(/\d+[A-Z*#]+/g);
+//   console.log(result);
+
+//   let previousNum = 0;
+//   result.forEach((element) => {
+//     const number = element.match(/\d+/)[0]; // 숫자 추출
+//     const letters = element.match(/[A-Z*#]/g); // 문자와 기호 각각 추출
+//     let arr = [number, ...letters];
+//     console.log(arr);
+
+//     let cal = calC(arr);
+//     switch (arr.length) {
+//       case 2:
+//         answer += cal;
+//         previousNum = cal;
+//         break;
+//       case 3:
+//         if (arr[2] === "*") {
+//           if (!answer) {
+//             answer += cal * 2;
+//             previousNum = cal * 2;
+//             break;
+//           } else {
+//             answer += previousNum + cal * 2;
+//             previousNum = cal * 2;
+//             break;
+//           }
+//         } else if (arr[2] == 0) {
+//           answer += cal;
+//           previousNum = cal;
+//           break;
+//         } else {
+//           answer += cal * -1;
+//           console.log(cal * -1);
+
+//           previousNum = cal * -1;
+//           break;
+//         }
+//     }
+//     console.log(answer);
+//   });
+
+//   return answer;
+// }
+
+// function calC(ary) {
+//   switch (ary[1]) {
+//     case "S":
+//       return Number(ary[0]);
+//     case "D":
+//       return Number(ary[0] ** 2);
+//     case "T":
+//       return Number(ary[0] ** 3);
+//   }
+// }
