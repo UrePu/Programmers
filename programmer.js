@@ -2502,8 +2502,27 @@
 // 여벌 체육복을 가져온 학생이 체육복을 도난당했을 수 있습니다. 이때 이 학생은 체육복을 하나만 도난당했다고 가정하며,
 //  남은 체육복이 하나이기에 다른 학생에게는 체육복을 빌려줄 수 없습니다.
 
-solution(5, [2, 4], [1, 3, 5]);
-function solution(n, lost, reserve) {
-  var answer = 0;
-  return answer;
-}
+// solution(5, [2, 4], [1, 3, 5]);
+//reserve 기준으로 왼쪽부터 판별.
+// function solution(n, lost, reserve) {
+//   var answer = 0;
+
+//   const realReserve = reserve.filter((x) => !lost.includes(x));
+//   const realLost = lost.filter((x) => !reserve.includes(x));
+//   realReserve.sort((a, b) => a - b);
+//   realReserve.forEach((x) => {
+//     let valuesToRemove = [x - 1, x, x + 1];
+//     for (const value of valuesToRemove) {
+//       if (realLost.includes(value)) {
+//         const index = realLost.indexOf(value);
+//         realLost.splice(index, 1); // 첫 번째 값 삭제
+//         // console.log(`${value} 삭제 후 lost:`, lost);
+//         break; // 첫 번째 삭제만 수행
+//       }
+//     }
+//   });
+//   answer = n - realLost.length;
+//   //   console.log(answer);
+
+//   return answer;
+// }
