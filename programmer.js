@@ -2565,3 +2565,23 @@
 // win_nums의 모든 원소는 1 이상 45 이하인 정수입니다.
 // win_nums에는 같은 숫자가 2개 이상 담겨있지 않습니다.
 // win_nums의 원소들은 정렬되어 있지 않을 수도 있습니다.
+// solution([44, 1, 0, 0, 31, 25], [31, 10, 45, 1, 6, 19]);
+// function solution(lottos, win_nums) {
+//   let erase = 0; // 지워진 숫자(0)의 개수
+//   let same = 0; // 당첨 번호와 일치하는 숫자의 개수
+
+//   // 로또 번호를 순회하며 지워진 숫자와 당첨 숫자 확인
+//   lottos.forEach((num) => {
+//     if (num === 0) {
+//       erase++;
+//     } else if (win_nums.includes(num)) {
+//       same++;
+//     }
+//   });
+
+//   // 최고 순위와 최저 순위 계산
+//   const maxRank = Math.min(7 - (same + erase), 6); // 7등은 존재하지 않으므로 최대 6등
+//   const minRank = Math.min(7 - same, 6); // 최소 순위 계산
+
+//   return [maxRank, minRank];
+// }
