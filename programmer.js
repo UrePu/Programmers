@@ -2580,7 +2580,7 @@
 //   });
 
 //   // 최고 순위와 최저 순위 계산
-//   const maxRank = Math.min(7 - (same + erase), 6); // 7등은 존재하지 않으므로 최대 6등
+//   const maxRank = Math.min(7 - (same + erase), 6); //  7등은 존재하지 않으므로 최대 6등
 //   const minRank = Math.min(7 - same, 6); // 최소 순위 계산
 
 //   return [maxRank, minRank];
