@@ -2600,3 +2600,33 @@
 // 제한사항
 // 1 ≤ s의 길이 ≤ 10,000
 // s는 영어 소문자로만 이루어져 있습니다.
+// solution();
+
+// function solution(s) {
+//   let preW = "";
+//   let countA = 0;
+//   let countB = 0;
+//   let arrW = s.split("");
+//   var answer = 0;
+//   arrW.forEach((e, i) => {
+//     if (!preW) {
+//       preW = e;
+//       countA++;
+//     } else if (e === preW) {
+//       countA++;
+//     } else if (e !== preW) {
+//       countB++;
+//     }
+//     if (i === arrW.length - 1) {
+//       answer++;
+//     } else if (countA === countB && countA >= 1) {
+//       preW = "";
+//       countA = 0;
+//       countB = 0;
+//       answer++;
+//     }
+//   });
+//   console.log(answer);
+
+//   return answer;
+// }
