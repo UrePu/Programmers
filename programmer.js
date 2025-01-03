@@ -2630,3 +2630,19 @@
 
 //   return answer;
 // }
+
+// function solution(s) {
+//   let countA = 0, countB = 0, answer = 0;
+
+//   for (const char of s) {
+//     char === s[0] ? countA++ : countB++;
+
+//     if (countA === countB) {
+//       answer++;
+//       countA = 0;
+//       countB = 0;
+//     }
+//   }
+
+//   return countA > 0 || countB > 0 ? answer + 1 : answer;
+// }
