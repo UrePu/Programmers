@@ -2666,25 +2666,25 @@
 // s와 skip은 알파벳 소문자로만 이루어져 있습니다.
 // skip에 포함되는 알파벳은 s에 포함되지 않습니다.
 // 1 ≤ index ≤ 20
-solution("aasdf", "wbqd", 5);
-function solution(s, skip, index) {
-  var answer = "";
-  let wordArr1 = s.split("").map((e) => e.charCodeAt());
-  let wordArr2 = skip.split("").map((e) => e.charCodeAt());
+// solution("aasdf", "wbqd", 5);
+// function solution(s, skip, index) {
+//   var answer = "";
+//   let wordArr1 = s.split("").map((e) => e.charCodeAt());
+//   let wordArr2 = skip.split("").map((e) => e.charCodeAt());
 
-  let wordArr3 = wordArr1.map((e) => {
-    return wordArr2.filter((d) => d > e && d < e + index).length + e + index;
-  });
+//   let wordArr3 = wordArr1.map((e) => {
+//     return wordArr2.filter((d) => d > e && d < e + index).length + e + index;
+//   });
 
-  answer = wordArr3
-    .map((e) => {
-      if (e > 122) {
-        e -= 26;
-      }
-      return String.fromCharCode(e);
-    })
-    .join("");
+//   answer = wordArr3
+//     .map((e) => {
+//       if (e > 122) {
+//         e -= 26;
+//       }
+//       return String.fromCharCode(e);
+//     })
+//     .join("");
 
-  // console.log(answer);
-  return answer;
-}
+//   // console.log(answer);
+//   return answer;
+// }
