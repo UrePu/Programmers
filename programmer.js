@@ -2715,4 +2715,6 @@
 // 1 ≤ targets의 원소의 길이 ≤ 100 ..
 // targets의 원소는 알파벳 대문자로만 이루어져 있습니다.. a
 
-function solution() {}
+function solution() {
+  let i = 0;
+}
